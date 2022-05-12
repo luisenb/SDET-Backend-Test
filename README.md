@@ -3,6 +3,9 @@
 ### Project Notes
 Time spent: 4-5 hours
 
+There will be a report generated after you run the tests, you can find it here: `/test-output/my-report.html`
+
+This report is a single html that can be sent through email, slack or any channel without depending on several files.
 
 The following test case is failing:
 
@@ -28,7 +31,8 @@ This information can also be seen in the report
   - Execute the following command: `mvn clean test`
 - Factory File: `src\test\java\suite\NasaFactory.java`
 - Test File: `src\test\java\test\CuriosityTest.java`
-- 
+- Dockerfile: `docker build -t arg-demo --build-arg SSH_PRIVATE_KEY=${SSH_PRIVATE_KEY} --build-arg BASE_URL=${BASE_URL} --build-arg NASA_KEY=${NASA_KEY} .`
+
 ### Tools Used
 
 - Java - Programming language used for the base of the project.
