@@ -12,7 +12,9 @@ the amount taken by other cameras on the same date.
 ```
 
 Does not meet the conditions mentioned and therefore fails.
+
 Curiosity total photos: 856
+
 Spirit and Opportunity photos: 130
 
 
