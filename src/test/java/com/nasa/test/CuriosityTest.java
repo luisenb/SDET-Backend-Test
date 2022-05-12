@@ -125,13 +125,13 @@ public class CuriosityTest extends TestBase {
                 opportunity.getBody(responseOpportunity, ResponseManifest.class);
 
         int totalPhotosCuriosity = curiosity.getCount(date, sol, responseManifestCuriosity);
-        int totalPhotosSpirit = spirit.getCount(date, sol, responseManifestSpirit) * 10;
-        int totalPhotosOpportunity = opportunity.getCount(date, sol, responseManifestOpportunity) * 10;
-        int totalPhotosOtherCamaras = totalPhotosSpirit + totalPhotosOpportunity;
+        int totalPhotosSpirit = spirit.getCount(date, responseManifestSpirit);
+        int totalPhotosOpportunity = opportunity.getCount(date, responseManifestOpportunity);
+        int totalPhotosOtherCamaras = (totalPhotosSpirit + totalPhotosOpportunity) * 10;
 
         Assert.assertTrue(totalPhotosCuriosity < totalPhotosOtherCamaras,
-                "The amount of pictures taken by Curiosity is greater than 10 times "
-                        + "the amount of pictures taken by other camaras.");
+                "The amount of pictures taken by Curiosity("+ totalPhotosCuriosity+") is greater than 10 times "
+                        + "the amount of pictures taken by other camaras(" + totalPhotosOtherCamaras + ")");
 
     }
 }

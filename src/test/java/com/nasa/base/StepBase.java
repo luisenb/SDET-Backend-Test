@@ -82,6 +82,20 @@ public class StepBase {
         return finalList;
     }
 
+    public int getCount(String date, ResponseManifest responseManifest){
+        Optional optional = responseManifest
+                .getPhotoManifest()
+                .getPhotos()
+                .stream()
+                .filter(photosItem -> photosItem.getEarthDate().equals(date))
+                .findFirst();
+        int total = 0;
+        if(optional.isPresent()){
+            PhotosItem photosItem = (PhotosItem) optional.get();
+            total = photosItem.getTotalPhotos();
+        }
+        return total;
+    }
     public int getCount(String date, int sol, ResponseManifest responseManifest){
         Optional optional = responseManifest
                 .getPhotoManifest()
