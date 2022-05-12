@@ -31,7 +31,7 @@ This information can also be seen in the report
   - Execute the following command: `mvn clean test`
 - Factory File: `src\test\java\suite\NasaFactory.java`
 - Test File: `src\test\java\test\CuriosityTest.java`
-- Dockerfile: `docker build -t arg-demo --build-arg SSH_PRIVATE_KEY=${SSH_PRIVATE_KEY} --build-arg BASE_URL=${BASE_URL} --build-arg NASA_KEY=${NASA_KEY} .`
+- Dockerfile: `docker build -t sdet-test --build-arg SSH_PRIVATE_KEY=${SSH_PRIVATE_KEY} --build-arg BASE_URL=${BASE_URL} --build-arg NASA_KEY=${NASA_KEY} .`
 
 ### Tools Used
 
