@@ -115,7 +115,7 @@ public class CustomisedReport implements IReporter {
             switch (testResult.getStatus()) {
                 case ITestResult.FAILURE:
                     return String.format(ROW_TEMPLATE, "danger", testNameTrim, testNameTrim, testName, description,
-                            "FAILED", testNameTrim, testNameTrim, "NA", "NA");
+                            "FAILED", testNameTrim, testNameTrim, request, response);
 
                 case ITestResult.SUCCESS:
                     return String.format(ROW_TEMPLATE, "success", testNameTrim, testNameTrim, testName, description,
@@ -123,7 +123,7 @@ public class CustomisedReport implements IReporter {
 
                 case ITestResult.SKIP:
                     return String.format(ROW_TEMPLATE, "warning", testNameTrim, testNameTrim, testName, description,
-                            "SKIPPED", testNameTrim, testNameTrim, "NA", "NA");
+                            "SKIPPED", testNameTrim, testNameTrim, request, response);
 
                 default:
                     return "";
